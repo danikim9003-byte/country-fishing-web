@@ -34,7 +34,7 @@ jobs:
           mkdir site
           unzip -q site.zip -d site
           test -f site/index.html
-          test -f site/pack/pack.bin
+          test -f site/pack/pack.zip || test -f site/pack/pack.bin
       - uses: actions/upload-pages-artifact@v5
         with:
           path: site
